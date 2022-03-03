@@ -8,6 +8,10 @@ namespace VisualProgLab2
 
         public RomanNumber(ushort n)
         {
+            if (n <= 0)
+            {
+                throw new ArgumentOutOfRangeException("Ошибка использования значения 0");
+            }
             number = n;
         }
         public override string ToString()
